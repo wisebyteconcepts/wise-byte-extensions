@@ -1,0 +1,10 @@
+﻿{
+    "profiles": {
+      "ExtensionSamples (Unpackaged)": {
+        "commandName": "Project"
+      },
+      "ExtensionSamples (Package)": {
+        "commandName": "MsixPackage"
+      }
+    }
+}
