@@ -58,8 +58,7 @@
               "RelativeToolTip": "samples\\ExtensionSamples\\App.xaml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAABGAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-10-25T14:07:47.112Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-25T14:07:47.112Z"
             },
             {
               "$type": "Document",
@@ -82,7 +81,7 @@
               "RelativeDocumentMoniker": "samples\\ExtensionSamples\\ExtensionSamples.csproj",
               "ToolTip": "E:\\Development\\Projects\\wise-byte-extensions\\samples\\ExtensionSamples\\ExtensionSamples.csproj",
               "RelativeToolTip": "samples\\ExtensionSamples\\ExtensionSamples.csproj",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAAABEAAAAvAAAAAAAAAA==",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAACIAAAA4AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
               "WhenOpened": "2025-10-20T13:28:51.743Z",
               "EditorCaption": ""
@@ -97,8 +96,7 @@
               "RelativeToolTip": "src\\WiseByteExtensions\\Converters\\BooleanToSelectionConverter.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-20T13:27:57.508Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-20T13:27:57.508Z"
             }
           ]
         }
