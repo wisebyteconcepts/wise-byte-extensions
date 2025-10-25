@@ -3,7 +3,7 @@ using Microsoft.UI.Xaml.Data;
 
 using System;
 
-namespace WiseByteExtensions.Converters;
+namespace WiseByteExtensions.WinUI.Converters;
 
 public class BooleanToSelectionConverter : IValueConverter
 {

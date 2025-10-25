@@ -3,7 +3,6 @@
 		<OutputType>WinExe</OutputType>
 		<TargetFramework>net8.0-windows10.0.19041.0</TargetFramework>
 		<TargetPlatformMinVersion>10.0.17763.0</TargetPlatformMinVersion>
-
 		<RootNamespace>ExtensionSamples</RootNamespace>
 		<ApplicationIcon>Assets/WindowIcon.ico</ApplicationIcon>
 		<ApplicationManifest>app.manifest</ApplicationManifest>
@@ -29,14 +28,17 @@
 	<ItemGroup>
 		<PackageReference Include="CommunityToolkit.Mvvm" Version="8.1.0" />
 		<PackageReference Include="Microsoft.Extensions.Hosting" Version="6.0.1" />
-		<PackageReference Include="Microsoft.WindowsAppSDK" Version="1.5.240802000" />
+
 		<PackageReference Include="Microsoft.Xaml.Behaviors.WinUI.Managed" Version="2.0.9" />
 		<PackageReference Include="Newtonsoft.Json" Version="13.0.4" />
 		<PackageReference Include="WinUIEx" Version="2.3.2" />
+		<PackageReference Include="Microsoft.WindowsAppSDK" Version="1.8.251003001" />
+
 	</ItemGroup>
 
 	<ItemGroup>
-		<ProjectReference Include="..\..\src\WiseByteExtensions\WiseByteExtensions.csproj" />
+		<ProjectReference Include="..\..\src\WiseByteExtensions.Core\WiseByteExtensions.Core.csproj" />
+		<ProjectReference Include="..\..\src\WiseByteExtensions.WinUI\WiseByteExtensions.WinUI.csproj" />
 	</ItemGroup>
 
 	<PropertyGroup Condition="'$(DisableHasPackageAndPublishMenuAddedByProject)'!='true' and '$(EnableMsixTooling)'=='true'">
