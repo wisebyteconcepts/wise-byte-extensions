@@ -1,10 +1,12 @@
+![Logo](docs/assets/wise-byte-extensions-banner.png)
+
 # Wise Byte Extensions
 
 A collection of useful .NET 8 extension methods and utilities to enhance productivity and code readability in your .NET projects.
 
 ## Features
 
-- Extension methods for common .NET types (e.g., `string`, `IEnumerable<T>`, `DateTime`, `IValueConverter`, `Controls` `Styles` etc.)
+- Extension methods for common .NET types (e.g., `string`, `IEnumerable<T>`, `DateTime`, `IValueConverter`, `Controls`, `Styles` etc.)
 - Utilities for collections, LINQ, and data manipulation
 - Helper methods for working with tasks, async/await, and exceptions
 - Designed for .NET 8 and compatible with modern C# features
@@ -20,7 +22,7 @@ A collection of useful .NET 8 extension methods and utilities to enhance product
 ### Prerequisites
 
 - [.NET 8 SDK](https://dotnet.microsoft.com/download/dotnet/8.0)
-- WinUI3
+- [WinUI3](https://learn.microsoft.com/en-us/windows/apps/winui/winui3/create-your-first-winui3-app)
 
 ### Installation
 

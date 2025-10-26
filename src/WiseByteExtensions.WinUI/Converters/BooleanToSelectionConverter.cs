@@ -42,7 +42,7 @@ namespace WiseByteExtensions.WinUI.Converters;
 /// </remarks>
 public partial class BooleanToSelectionConverter : IValueConverter
 {
-    public object Convert(object value, Type targetType, object parameter, string language)
+    public object Convert(object value, Type targetType, object? parameter, string? language)
     {
         if (value == null)
         {
@@ -64,7 +64,7 @@ public partial class BooleanToSelectionConverter : IValueConverter
         return false;
     }
 
-    public object ConvertBack(object value, Type targetType, object parameter, string language)
+    public object ConvertBack(object value, Type targetType, object? parameter, string? language)
     {
         if (value is bool isChecked)
         {

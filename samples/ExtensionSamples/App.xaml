@@ -15,6 +15,8 @@
 
             <converters:BooleanToSelectionConverter x:Key="BooleanToSelectionConverter" />
             <converters:ThreeStateBooleanToSelectionConverter x:Key="ThreeStateBooleanToSelectionConverter" />
+            <converters:BooleanToTextConverter x:Key="BooleanToTextConverter" />
+            <converters:ThreeStateBooleanToTextConverter x:Key="ThreeStateBooleanToTextConverter" />
 
         </ResourceDictionary>
     </Application.Resources>
