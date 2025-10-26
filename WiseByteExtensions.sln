@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WiseByteExtensions.Core", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WiseByteExtensions.WinUI", "src\WiseByteExtensions.WinUI\WiseByteExtensions.WinUI.csproj", "{347FA335-32BF-4153-992D-3D100E6E7C0A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WiseByteExtensions.Tests", "tests\WiseByteExtensions.Tests\WiseByteExtensions.Tests.csproj", "{66A4D254-5B30-4EE3-9A13-8477CD1AEEF6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{347FA335-32BF-4153-992D-3D100E6E7C0A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{347FA335-32BF-4153-992D-3D100E6E7C0A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{347FA335-32BF-4153-992D-3D100E6E7C0A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{66A4D254-5B30-4EE3-9A13-8477CD1AEEF6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{66A4D254-5B30-4EE3-9A13-8477CD1AEEF6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{66A4D254-5B30-4EE3-9A13-8477CD1AEEF6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{66A4D254-5B30-4EE3-9A13-8477CD1AEEF6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

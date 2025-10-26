@@ -10,10 +10,11 @@
                 <ResourceDictionary Source="/Styles/FontSizes.xaml" />
                 <ResourceDictionary Source="/Styles/Thickness.xaml" />
                 <ResourceDictionary Source="/Styles/TextBlock.xaml" />
+                <ResourceDictionary Source="/Styles/ControlStyles.xaml" />
             </ResourceDictionary.MergedDictionaries>
 
             <converters:BooleanToSelectionConverter x:Key="BooleanToSelectionConverter" />
-
+            <converters:ThreeStateBooleanToSelectionConverter x:Key="ThreeStateBooleanToSelectionConverter" />
 
         </ResourceDictionary>
     </Application.Resources>

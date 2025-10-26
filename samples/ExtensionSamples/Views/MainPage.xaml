@@ -2,11 +2,89 @@
     x:Class="ExtensionSamples.Views.MainPage"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:behaviors="using:ExtensionSamples.Behaviors"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:viewmodel="using:ExtensionSamples.ViewModels"
+    behaviors:NavigationViewHeaderBehavior.HeaderMode="Never"
+    d:DataContext="{d:DesignInstance Type=viewmodel:MainViewModel}"
     mc:Ignorable="d">
 
-    <Grid x:Name="ContentArea">
-        
-    </Grid>
+    <ScrollViewer>
+
+        <Grid
+            x:Name="ContentArea"
+            ColumnSpacing="32"
+            RowSpacing="32">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+
+            <StackPanel Style="{StaticResource CardPanelStyle}">
+
+                <TextBlock Style="{StaticResource BodyTextBlockStyle}" Text="Two State Boolean Converter" />
+                <MenuFlyoutSeparator />
+
+                <StackPanel Spacing="16">
+
+                    <StackPanel Spacing="4">
+
+                        <TextBlock Style="{StaticResource CaptionTextBlockStyle}" Text="User Interface" />
+
+                        <StackPanel Orientation="Horizontal" Spacing="8">
+                            <RadioButton Content="True" IsChecked="{Binding TwoStateBoolean, Converter={StaticResource BooleanToSelectionConverter}, ConverterParameter='True', Mode=TwoWay}" />
+                            <RadioButton Content="False" IsChecked="{Binding TwoStateBoolean, Converter={StaticResource BooleanToSelectionConverter}, ConverterParameter='False', Mode=TwoWay}" />
+                        </StackPanel>
+
+                    </StackPanel>
+
+                    <StackPanel Grid.Row="1" Spacing="4">
+                        <TextBlock Style="{StaticResource CaptionTextBlockStyle}" Text="Viewmodel" />
+                        <TextBlock Style="{StaticResource BodyLargeStrongTextBlockStyle}" Text="{Binding TwoStateBoolean, Mode=OneWay}" />
+                        <Button
+                            Margin="0,8,0,0"
+                            Command="{Binding CheckTwoStateBooleanCommand}"
+                            Content="Check ViewModel Value" />
+                    </StackPanel>
+                </StackPanel>
+            </StackPanel>
+
+            <StackPanel Grid.Column="1" Style="{StaticResource CardPanelStyle}">
+
+                <TextBlock Style="{StaticResource BodyTextBlockStyle}" Text="Three State Boolean Converter" />
+                <MenuFlyoutSeparator />
+
+                <StackPanel Spacing="16">
+
+                    <StackPanel Spacing="4">
+
+                        <TextBlock Style="{StaticResource CaptionTextBlockStyle}" Text="User Interface" />
+
+                        <StackPanel Orientation="Horizontal" Spacing="8">
+                            <RadioButton Content="True" IsChecked="{Binding ThreeStateBoolean, Converter={StaticResource ThreeStateBooleanToSelectionConverter}, ConverterParameter='True', Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+                            <RadioButton Content="False" IsChecked="{Binding ThreeStateBoolean, Converter={StaticResource ThreeStateBooleanToSelectionConverter}, ConverterParameter='False', Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+                            <RadioButton Content="Null" IsChecked="{Binding ThreeStateBoolean, Converter={StaticResource ThreeStateBooleanToSelectionConverter}, ConverterParameter='Null', Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+                        </StackPanel>
+                    </StackPanel>
+
+                    <StackPanel Grid.Row="1" Spacing="4">
+                        <TextBlock Style="{StaticResource CaptionTextBlockStyle}" Text="Viewmodel" />
+                        <TextBlock Style="{StaticResource BodyLargeStrongTextBlockStyle}" Text="{Binding ThreeStateBooleanText}" />
+                        <Button
+                            Margin="0,8,0,0"
+                            Command="{Binding CheckThreeStateBooleanCommand}"
+                            Content="Check ViewModel Value" />
+                    </StackPanel>
+                </StackPanel>
+            </StackPanel>
+
+
+        </Grid>
+    </ScrollViewer>
 </Page>
