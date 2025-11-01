@@ -24,12 +24,7 @@ Clone the repo and add `WiseByteExtensions.WinUI` project to your solution.
 
 ## Quick Start
 
-link to detailed quick start guide
-1. Add the namespace to your XAML files:
-   ```xml
-   xmlns:wbe="using:WiseByteExtensions.WinUI"
-   ```
- - [Specification](.../docs/WiseByteExtensions.WinUI-getting-started.md) 
+ - [Documentaion](../../docs/WiseByteExtensions.WinUI-getting-started.md) 
 
 
 ## Advanced Topics
