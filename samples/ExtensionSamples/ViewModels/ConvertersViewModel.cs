@@ -3,7 +3,7 @@ using CommunityToolkit.Mvvm.Input;
 
 namespace ExtensionSamples.ViewModels;
 
-public partial class MainViewModel : ObservableRecipient
+public partial class ConvertersViewModel : ObservableRecipient
 {
 
     [ObservableProperty]
@@ -16,15 +16,12 @@ public partial class MainViewModel : ObservableRecipient
 
 
     [ObservableProperty]
-    private bool twoStateBooleanForText;
+    private bool twoStateBooleanForText, twoStateBooleanForBrush;
 
     [ObservableProperty]
-    private bool? threeStateBooleanForText;
+    private bool? threeStateBooleanForText, threeStateBooleanForBrush;
 
-
-
-
-    public MainViewModel()
+    public ConvertersViewModel()
     {
     }
 
@@ -54,6 +51,7 @@ public partial class MainViewModel : ObservableRecipient
         }
     }
 
+
     [RelayCommand]
     private void ThreeStateBooleanSwitcherForText(string switchBool)
     {
@@ -70,5 +68,39 @@ public partial class MainViewModel : ObservableRecipient
             ThreeStateBooleanForText = null;
         }
     }
+
+
+    [RelayCommand]
+    private void TwoStateBooleanSwitcherForBrush(string switchBool)
+    {
+        if (string.Equals(switchBool, "true", StringComparison.OrdinalIgnoreCase))
+        {
+            TwoStateBooleanForBrush = true;
+        }
+        else if (string.Equals(switchBool, "false", StringComparison.OrdinalIgnoreCase))
+        {
+            TwoStateBooleanForBrush = false;
+        }
+    }
+
+
+    [RelayCommand]
+    private void ThreeStateBooleanSwitcherForBrush(string switchBool)
+    {
+        if (string.Equals(switchBool, "true", StringComparison.OrdinalIgnoreCase))
+        {
+            ThreeStateBooleanForBrush = true;
+        }
+        else if (string.Equals(switchBool, "false", StringComparison.OrdinalIgnoreCase))
+        {
+            ThreeStateBooleanForBrush = false;
+        }
+        else if (string.Equals(switchBool, "null", StringComparison.OrdinalIgnoreCase))
+        {
+            ThreeStateBooleanForBrush = null;
+        }
+    }
+
+
 
 }

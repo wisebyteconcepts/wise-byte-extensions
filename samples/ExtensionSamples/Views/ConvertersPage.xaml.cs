@@ -4,16 +4,16 @@ using Microsoft.UI.Xaml.Controls;
 
 namespace ExtensionSamples.Views;
 
-public sealed partial class MainPage : Page
+public sealed partial class ConvertersPage : Page
 {
-    public MainViewModel ViewModel
+    public ConvertersViewModel ViewModel
     {
         get;
     }
 
-    public MainPage()
+    public ConvertersPage()
     {
-        ViewModel = App.GetService<MainViewModel>();
+        ViewModel = App.GetService<ConvertersViewModel>();
         InitializeComponent();
         DataContext = ViewModel;
     }

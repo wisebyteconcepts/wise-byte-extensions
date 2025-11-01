@@ -1,0 +1,27 @@
+﻿<Page
+    x:Class="ExtensionSamples.Views.ControlsPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:behaviors="using:ExtensionSamples.Behaviors"
+    xmlns:controls="using:WiseByteExtensions.WinUI.Controls"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:viewmodels="using:ExtensionSamples.ViewModels"
+    behaviors:NavigationViewHeaderBehavior.HeaderMode="Never"
+    d:DataContext="{d:DesignInstance Type=viewmodels:ControlsViewModel}"
+    mc:Ignorable="d">
+
+    <ScrollViewer Padding="32">
+        <Grid x:Name="ContentArea">
+            <controls:Tag
+                IconSize="20"
+                Prefix="Info:"
+                Suffix="(example)"
+                Text="Sample Tag">
+                <controls:Tag.Icon>
+                    <SymbolIcon Symbol="OtherUser" />
+                </controls:Tag.Icon>
+            </controls:Tag>
+        </Grid>
+    </ScrollViewer>
+</Page>

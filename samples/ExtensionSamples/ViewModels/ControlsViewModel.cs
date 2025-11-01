@@ -2,9 +2,9 @@
 
 namespace ExtensionSamples.ViewModels;
 
-public partial class BlankViewModel : ObservableRecipient
+public partial class ControlsViewModel : ObservableRecipient
 {
-    public BlankViewModel()
+    public ControlsViewModel()
     {
     }
 }

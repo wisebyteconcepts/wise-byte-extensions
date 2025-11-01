@@ -16,9 +16,8 @@
 		<WindowsAppSDKSelfContained>true</WindowsAppSDKSelfContained>
 		<WindowsPackageType>None</WindowsPackageType>
 	</PropertyGroup>
-	<ItemGroup>
-	  <None Remove="Styles\ControlStyles.xaml" />
-	</ItemGroup>
+
+
 
 	<ItemGroup>
 		<Manifest Include="$(ApplicationManifest)" />
@@ -44,11 +43,7 @@
 		<ProjectReference Include="..\..\src\WiseByteExtensions.WinUI\WiseByteExtensions.WinUI.csproj" />
 	</ItemGroup>
 
-	<ItemGroup>
-	  <Page Update="Styles\ControlStyles.xaml">
-	    <Generator>MSBuild:Compile</Generator>
-	  </Page>
-	</ItemGroup>
+
 
 	<PropertyGroup Condition="'$(DisableHasPackageAndPublishMenuAddedByProject)'!='true' and '$(EnableMsixTooling)'=='true'">
 		<HasPackageAndPublishMenu>true</HasPackageAndPublishMenu>

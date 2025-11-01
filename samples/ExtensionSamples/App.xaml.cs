@@ -66,10 +66,10 @@ public partial class App : Application
             services.AddSingleton<IFileService, FileService>();
 
             // Views and ViewModels
-            services.AddTransient<BlankViewModel>();
-            services.AddTransient<BlankPage>();
-            services.AddTransient<MainViewModel>();
-            services.AddTransient<MainPage>();
+            services.AddTransient<ControlsViewModel>();
+            services.AddTransient<ControlsPage>();
+            services.AddTransient<ConvertersViewModel>();
+            services.AddTransient<ConvertersPage>();
             services.AddTransient<ShellPage>();
             services.AddTransient<ShellViewModel>();
 

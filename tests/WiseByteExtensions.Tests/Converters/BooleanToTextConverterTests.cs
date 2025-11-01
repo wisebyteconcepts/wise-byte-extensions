@@ -28,8 +28,7 @@ public class BooleanToTextConverterTests
 
 
     [Theory]
-    // value, parameter, expected result
-    // value, parameter, expected result
+    // convertedvalue, parameter, expected viewmodel value
     [InlineData("TrueText", "TrueText|FalseText", true)]
     [InlineData("FalseText", "TrueText|FalseText", false)]
     [InlineData("FalseText", "TrueText|FalseText|AnotherText", false)]

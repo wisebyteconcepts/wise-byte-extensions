@@ -14,8 +14,8 @@ public class PageService : IPageService
 
     public PageService()
     {
-        Configure<MainViewModel, MainPage>();
-        Configure<BlankViewModel, BlankPage>();
+        Configure<ConvertersViewModel, ConvertersPage>();
+        Configure<ControlsViewModel, ControlsPage>();
     }
 
     public Type GetPageType(string key)
