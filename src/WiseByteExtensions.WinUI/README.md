@@ -29,7 +29,7 @@ link to detailed quick start guide
    ```xml
    xmlns:wbe="using:WiseByteExtensions.WinUI"
    ```
- - [Specification](../docs/WiseByteExtensions.WinUI-getting-started.md) 
+ - [Specification](.../docs/WiseByteExtensions.WinUI-getting-started.md) 
 
 
 ## Advanced Topics
