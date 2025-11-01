@@ -19,6 +19,8 @@
             <converters:ThreeStateBooleanToTextConverter x:Key="ThreeStateBooleanToTextConverter" />
             <converters:BooleanToResourceBrushConverter x:Key="BooleanToResourceBrushConverter" />
             <converters:ThreeStateBooleanToResourceBrushConverter x:Key="ThreeStateBooleanToResourceBrushConverter" />
+            <converters:NumericValueToStringConverter x:Key="NumericValueToStringConverter" />
+            <converters:ValueTypeNameConverter x:Key="ValueTypeNameConverter" />
 
         </ResourceDictionary>
     </Application.Resources>

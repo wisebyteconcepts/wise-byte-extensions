@@ -1,5 +1,9 @@
-﻿using CommunityToolkit.Mvvm.ComponentModel;
+﻿using System.Globalization;
+
+using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
+
+using Newtonsoft.Json.Linq;
 
 namespace ExtensionSamples.ViewModels;
 
@@ -20,6 +24,15 @@ public partial class ConvertersViewModel : ObservableRecipient
 
     [ObservableProperty]
     private bool? threeStateBooleanForText, threeStateBooleanForBrush;
+
+
+
+    [ObservableProperty]
+    public decimal numericValue;
+
+    [ObservableProperty]
+    private string numericValueText = string.Empty;
+
 
     public ConvertersViewModel()
     {
@@ -102,5 +115,34 @@ public partial class ConvertersViewModel : ObservableRecipient
     }
 
 
+    private static decimal ParseDynamicNumericValue(string input, string? language = null)
+    {
+        if (string.IsNullOrWhiteSpace(input))
+            return 0;
+
+        var culture = string.IsNullOrEmpty(language)
+            ? CultureInfo.CurrentCulture
+            : new CultureInfo(language);
+
+        input = input.Trim();
+
+        // Try parsing in order of specificity
+        if (int.TryParse(input, NumberStyles.Integer, culture, out var intValue))
+            return intValue;
+
+        if (long.TryParse(input, NumberStyles.Integer, culture, out var longValue))
+            return longValue;
+
+        if (decimal.TryParse(input, NumberStyles.Float | NumberStyles.AllowThousands, culture, out var decimalValue))
+            return decimalValue;
+
+        return 0; // If nothing fits
+    }
+
+
+    partial void OnNumericValueTextChanged(string value)
+    {
+        NumericValue = ParseDynamicNumericValue(NumericValueText);
+    }
 
 }

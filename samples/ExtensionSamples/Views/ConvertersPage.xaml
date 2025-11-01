@@ -22,6 +22,7 @@
                 <RowDefinition Height="Auto" />
                 <RowDefinition Height="Auto" />
                 <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
             </Grid.RowDefinitions>
 
             <Grid.ColumnDefinitions>
@@ -261,6 +262,64 @@
                     </StackPanel>
                 </StackPanel>
             </StackPanel>
+
+
+
+            <!--  Numeric Value to String Converter  -->
+            <StackPanel
+                Grid.Row="3"
+                Grid.ColumnSpan="2"
+                Style="{StaticResource CardPanelStyle}">
+
+                <TextBlock Style="{StaticResource BodyTextBlockStyle}" Text="Numeric Value to String Converter" />
+                <MenuFlyoutSeparator />
+
+                <StackPanel Spacing="16">
+
+                    <StackPanel Spacing="4">
+
+                        <TextBlock Style="{StaticResource CaptionTextBlockStyle}" Text="ViewModel" />
+
+                        <StackPanel Spacing="8">
+
+                            <TextBox Text="{Binding NumericValueText, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+
+                            <StackPanel Orientation="Horizontal" Spacing="8">
+                                <TextBlock
+                                    VerticalAlignment="Center"
+                                    Style="{StaticResource CaptionTextBlockStyle}"
+                                    Text="Numeric Value:" />
+                                <TextBlock
+                                    VerticalAlignment="Center"
+                                    Style="{StaticResource BodyLargeStrongTextBlockStyle}"
+                                    Text="{Binding NumericValue, Mode=OneWay}" />
+                                <TextBlock
+                                    VerticalAlignment="Center"
+                                    Style="{StaticResource CaptionTextBlockStyle}"
+                                    Text="{Binding NumericValue, Mode=OneWay, Converter={StaticResource ValueTypeNameConverter}}" />
+                            </StackPanel>
+
+                        </StackPanel>
+
+                    </StackPanel>
+
+                    <StackPanel Spacing="4">
+                        <TextBlock Style="{StaticResource CaptionTextBlockStyle}" Text="User Interface" />
+
+                        <StackPanel Orientation="Horizontal" Spacing="8">
+                            <TextBox Header="C2" Text="{Binding NumericValue, Mode=TwoWay, Converter={StaticResource NumericValueToStringConverter}, ConverterParameter='C2', UpdateSourceTrigger=PropertyChanged}" />
+                            <TextBox Header="C2 (en-US)" Text="{Binding NumericValue, Mode=TwoWay, Converter={StaticResource NumericValueToStringConverter}, ConverterParameter='C2', ConverterLanguage='en-US', UpdateSourceTrigger=PropertyChanged}" />
+                            <TextBox Header="0.00 (en-US)" Text="{Binding NumericValue, Mode=TwoWay, Converter={StaticResource NumericValueToStringConverter}, ConverterParameter='0.00', ConverterLanguage='en-US', UpdateSourceTrigger=PropertyChanged}" />
+                            <TextBox Header="#,###.000 (en-US)" Text="{Binding NumericValue, Mode=TwoWay, Converter={StaticResource NumericValueToStringConverter}, ConverterParameter='#,###.000', ConverterLanguage='en-US', UpdateSourceTrigger=PropertyChanged}" />
+                        </StackPanel>
+
+
+                    </StackPanel>
+                </StackPanel>
+
+            </StackPanel>
+
+
 
 
         </Grid>
