@@ -12,7 +12,7 @@ WiseByteExtensions.WinUI provides a set of helpers and extension methods for Win
 - .NET 8.0 or later
 - WinUI 3 SDK
 
-### Via NuGet
+### NuGet
 ```shell
 dotnet add package WiseByteExtensions.WinUI
 ```
@@ -23,7 +23,7 @@ Clone the repo and add `WiseByteExtensions.WinUI` project to your solution.
 
 ## Quick Start
 
- - [Documentaion](../../docs/WiseByteExtensions.WinUI-getting-started.md) 
+ - [Converters Documentation](../../docs/WiseByteExtensions.WinUI-Converters.md) -> Comprehensive guide and API reference for the `IValueConverters`.
 
 ## Contributing
 - Fork the repo, create a branch, and submit a pull request.

@@ -16,6 +16,7 @@ public class PageService : IPageService
     {
         Configure<ConvertersViewModel, ConvertersPage>();
         Configure<ControlsViewModel, ControlsPage>();
+        Configure<ExtensionsViewModel, ExtensionsPage>();
     }
 
     public Type GetPageType(string key)
